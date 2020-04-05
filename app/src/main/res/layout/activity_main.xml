@@ -106,6 +106,7 @@
 
     <Button
         android:id="@+id/cold"
+        android:onClick="coldButtonClick"
         android:layout_width="95dp"
         android:layout_height="45dp"
         android:layout_marginStart="32dp"
@@ -116,6 +117,7 @@
 
     <Button
         android:id="@+id/hot"
+        android:onClick="hotButtonClick"
         android:layout_width="95dp"
         android:layout_height="45dp"
         android:layout_marginStart="44dp"
