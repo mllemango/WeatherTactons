@@ -6,13 +6,133 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/umbrella2"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:text="Boots"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/umbrella"
+        app:layout_constraintTop_toTopOf="@+id/umbrella" />
+
+    <Button
+        android:id="@+id/umbrella"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:text="Umbrella"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/tshirt_shorts"
+        app:layout_constraintTop_toBottomOf="@+id/tertiary_category" />
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/tertiary_category"
+        android:layout_width="344dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="352dp"
+        android:text="Tertiary Weather Category"
+        app:layout_constraintStart_toStartOf="@+id/secondary_category"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/light_jacket"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:text="Light Jacket"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/tshirt_shorts"
+        app:layout_constraintTop_toBottomOf="@+id/tshirt_shorts" />
+
+    <Button
+        android:id="@+id/heavy_jacket"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:text="Heavy Jacket"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/tshirt_pants"
+        app:layout_constraintTop_toTopOf="@+id/tshirt_pants" />
+
+    <Button
+        android:id="@+id/tshirt_pants"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:text="Tshirt/Pants"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/tshirt_shorts"
+        app:layout_constraintTop_toTopOf="@+id/tshirt_shorts" />
+
+    <Button
+        android:id="@+id/tshirt_shorts"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:text="Tshirt/Shorts"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/hot"
+        app:layout_constraintTop_toBottomOf="@+id/secondary_category" />
+
+    <TextView
+        android:id="@+id/secondary_category"
+        android:layout_width="344dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="192dp"
+        android:text="Secondary Weather Category"
+        app:layout_constraintStart_toStartOf="@+id/primary_category"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/extreme"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:text="Extreme"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/hot"
+        app:layout_constraintTop_toBottomOf="@+id/hot" />
+
+    <Button
+        android:id="@+id/temperate"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:text="Temperate"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/cold"
+        app:layout_constraintTop_toTopOf="@+id/cold" />
+
+    <Button
+        android:id="@+id/cold"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:text="Cold"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/hot"
+        app:layout_constraintTop_toTopOf="@+id/hot" />
+
+    <Button
+        android:id="@+id/hot"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="12dp"
+        android:text="Hot"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primary_category" />
+
+    <TextView
+        android:id="@+id/primary_category"
+        android:layout_width="344dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Primary Weather Category"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
