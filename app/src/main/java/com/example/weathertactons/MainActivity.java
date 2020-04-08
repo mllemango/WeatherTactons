@@ -41,10 +41,13 @@ public class MainActivity extends AppCompatActivity {
         // repeat
         long[] pattern = new long[]{0, 400, 200, 400, 200, 400, 200, 400};
 
+        // An amplitude of 0 implies no vibration (i.e. off), and any pairs with a timing value of 0 will be ignored.
+        int[] amps = new int[]{0, 200, 0, 100, 0, 50, 0, 5};
+
         // -1 : Do not repeat this pattern
         // pass 0 if you want to repeat this pattern from 0th index
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            v.vibrate(VibrationEffect.createWaveform(pattern, -1));
+            v.vibrate(VibrationEffect.createWaveform(pattern, amps, -1));
         } else {
             //deprecated in API 26
             v.vibrate(pattern, -1);
