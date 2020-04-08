@@ -72,7 +72,7 @@
         android:layout_marginTop="12dp"
         android:text="Tshirt/Shorts"
         android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="@+id/hot"
+        app:layout_constraintStart_toStartOf="@+id/extreme"
         app:layout_constraintTop_toBottomOf="@+id/secondary_category" />
 
     <TextView
@@ -88,41 +88,9 @@
         android:id="@+id/extreme"
         android:layout_width="95dp"
         android:layout_height="45dp"
-        android:layout_marginTop="12dp"
-        android:text="Extreme"
-        android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="@+id/hot"
-        app:layout_constraintTop_toBottomOf="@+id/hot" />
-
-    <Button
-        android:id="@+id/temperate"
-        android:layout_width="95dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="32dp"
-        android:text="Temperate"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/cold"
-        app:layout_constraintTop_toTopOf="@+id/cold" />
-
-    <Button
-        android:id="@+id/cold"
-        android:onClick="coldButtonClick"
-        android:layout_width="95dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="32dp"
-        android:text="Cold"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/hot"
-        app:layout_constraintTop_toTopOf="@+id/hot" />
-
-    <Button
-        android:id="@+id/hot"
-        android:onClick="hotButtonClick"
-        android:layout_width="95dp"
-        android:layout_height="45dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="12dp"
-        android:text="Hot"
+        android:text="Extreme"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/primary_category" />
