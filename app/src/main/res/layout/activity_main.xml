@@ -7,10 +7,11 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/umbrella2"
+        android:id="@+id/boots"
         android:layout_width="95dp"
         android:layout_height="45dp"
         android:layout_marginStart="32dp"
+        android:onClick="bootsButtonClick"
         android:text="Boots"
         android:textSize="10sp"
         app:layout_constraintStart_toEndOf="@+id/umbrella"
