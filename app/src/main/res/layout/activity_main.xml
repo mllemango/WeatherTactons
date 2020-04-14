@@ -65,7 +65,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="32dp"
         android:onClick="sweaterPantsButtonClick"
-        android:text="Tshirt/Pants"
+        android:text="Sweater/Pants"
         android:textSize="10sp"
         app:layout_constraintStart_toEndOf="@+id/tshirt_shorts"
         app:layout_constraintTop_toTopOf="@+id/tshirt_shorts" />
