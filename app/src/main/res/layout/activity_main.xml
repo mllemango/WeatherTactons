@@ -7,10 +7,11 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/umbrella2"
+        android:id="@+id/boots"
         android:layout_width="95dp"
         android:layout_height="45dp"
         android:layout_marginStart="32dp"
+        android:onClick="bootsButtonClick"
         android:text="Boots"
         android:textSize="10sp"
         app:layout_constraintStart_toEndOf="@+id/umbrella"
@@ -21,6 +22,7 @@
         android:layout_width="95dp"
         android:layout_height="45dp"
         android:layout_marginTop="12dp"
+        android:onClick="umbrellaButtonClick"
         android:text="Umbrella"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="@+id/tshirt_shorts"
@@ -63,7 +65,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="32dp"
         android:onClick="sweaterPantsButtonClick"
-        android:text="Tshirt/Pants"
+        android:text="Sweater/Pants"
         android:textSize="10sp"
         app:layout_constraintStart_toEndOf="@+id/tshirt_shorts"
         app:layout_constraintTop_toTopOf="@+id/tshirt_shorts" />
@@ -94,6 +96,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="12dp"
+        android:onClick="extremeButtonClick"
         android:text="Extreme"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="parent"
