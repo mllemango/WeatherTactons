@@ -17,23 +17,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/0_down"
+        android:id="@+id/down_0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:text="< 0 °C"
+        android:onClick="down0Click"
+        android:text="@string/_0_c"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome_sub2" />
 
     <Button
-        android:id="@+id/0_to_10"
+        android:id="@+id/between_0_10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:text="0 - 10 °C"
+        android:onClick="between010Click"
+        android:text="@string/_0_10_c"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/0_down" />
+        app:layout_constraintTop_toBottomOf="@+id/down_0" />
 
 </android.support.constraint.ConstraintLayout>

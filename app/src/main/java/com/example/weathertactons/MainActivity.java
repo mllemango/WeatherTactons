@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +17,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    /** Called when the user taps the Send button */
+    public void up20Click(View view) {
+        Intent intent = new Intent(this, ActivityHot.class);
+        startActivity(intent);
+    }
+
+    public void down10Click(View view) {
+        Intent intent = new Intent(this, ActivityCold.class);
+        startActivity(intent);
+    }
+
+    public void between1020Click(View view) {
+        Intent intent = new Intent(this, ActivityTemperate.class);
+        startActivity(intent);
     }
 
     //{sleep, vibrate, sleep, vibrate...}

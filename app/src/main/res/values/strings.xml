@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">WeatherTactons</string>
+    <string name="_10_c"><![CDATA[< 10 °C]]></string>
+    <string name="_0_c"><![CDATA[< 0 °C]]></string>
+    <string name="_0_10_c">0 - 10 °C</string>
+    <string name="_10_20_c">10 - 20 °C</string>
+    <string name="_20_c"><![CDATA[> 20 °C]]></string>
+    <string name="welcome_to_weather_tactons">Welcome to Weather Tactons!</string>
+    <string name="please_select_the_weather_conditions_that_apply">Please select the weather conditions that apply.</string>
+    <string name="extreme">Extreme</string>
 </resources>
