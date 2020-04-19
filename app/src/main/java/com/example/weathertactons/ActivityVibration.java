@@ -54,6 +54,9 @@ public class ActivityVibration extends AppCompatActivity {
         }else if(vibration_categories.contains("heavy_jacket")){
             Log.d("IN RUN VIBRATIONS", "HEAVYH JACKET" + vibration_categories);
             heavyJacketButtonClick();
+        }else if(vibration_categories.contains("sweater_pants")){
+            Log.d("IN RUN VIBRATIONS", "TSHIRT PANTS" + vibration_categories);
+            sweaterPantsButtonClick();
         }
 
         try {

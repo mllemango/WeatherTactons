@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void between1020Click(View view) {
         Intent intent = new Intent(this, ActivityTemperate.class);
+        vibration_categories.add("sweater_pants");
         intent.putExtra("VIBRATIONSARRAY",vibration_categories);
         startActivity(intent);
     }
