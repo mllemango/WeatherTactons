@@ -11,7 +11,7 @@
         android:layout_width="95dp"
         android:layout_height="45dp"
         android:layout_marginTop="56dp"
-        android:onClick="extremeButtonClick"
+        android:onClick="extremeClick"
         android:text="@string/extreme"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"

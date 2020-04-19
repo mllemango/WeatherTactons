@@ -11,7 +11,11 @@ import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
 
+import java.util.ArrayList;
+
 public class ActivityHot extends AppCompatActivity {
+
+    ArrayList vibration_categories = new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,15 +23,20 @@ public class ActivityHot extends AppCompatActivity {
         setContentView(R.layout.activity_hot);
 
         Intent intent = getIntent();
+        vibration_categories = (ArrayList)intent.getStringArrayListExtra("VIBRATIONSARRAY");
     }
 
     public void up25Click(View view) {
         Intent intent = new Intent(this, ActivityHot2.class);
+        vibration_categories.add("tshirt_shorts");
+        intent.putExtra("VIBRATIONSARRAY",vibration_categories);
         startActivity(intent);
     }
 
     public void between2025Click(View view) {
         Intent intent = new Intent(this, ActivityHot2.class);
+        vibration_categories.add("tshirt_pants");
+        intent.putExtra("VIBRATIONSARRAY",vibration_categories);
         startActivity(intent);
     }
 }
