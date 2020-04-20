@@ -17,6 +17,10 @@
         <activity android:name=".ActivityTemperate" />
         <activity android:name=".ActivityCold" />
         <activity android:name=".ActivityHot" />
+        <activity
+            android:name=".RealTimeWeather"
+            android:label="@string/title_activity_real_time_weather"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,5 +29,8 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

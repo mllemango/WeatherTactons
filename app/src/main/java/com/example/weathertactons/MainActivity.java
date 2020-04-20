@@ -1,6 +1,7 @@
 package com.example.weathertactons;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
@@ -13,6 +14,7 @@ import android.content.Intent;
 
 import java.util.List;
 import java.util.ArrayList;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -88,5 +90,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    public void goToAPI(View view){
+        Intent intent = new Intent(this, RealTimeWeather.class);
+        startActivity(intent);
+    }
 
 }
