@@ -7,121 +7,82 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/boots"
-        android:layout_width="95dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="32dp"
-        android:onClick="bootsButtonClick"
-        android:text="Boots"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/umbrella"
-        app:layout_constraintTop_toTopOf="@+id/umbrella" />
-
-    <Button
-        android:id="@+id/umbrella"
-        android:layout_width="95dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="12dp"
-        android:onClick="umbrellaButtonClick"
-        android:text="Umbrella"
-        android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="@+id/tshirt_shorts"
-        app:layout_constraintTop_toBottomOf="@+id/tertiary_category" />
-
-    <TextView
-        android:id="@+id/tertiary_category"
-        android:layout_width="344dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="352dp"
-        android:text="Tertiary Weather Category"
-        app:layout_constraintStart_toStartOf="@+id/secondary_category"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/light_jacket"
-        android:layout_width="95dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="12dp"
-        android:onClick="lightJacketButtonClick"
-        android:text="Light Jacket"
-        android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="@+id/tshirt_shorts"
-        app:layout_constraintTop_toBottomOf="@+id/tshirt_shorts" />
-
-    <Button
-        android:id="@+id/heavy_jacket"
-        android:layout_width="95dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="32dp"
-        android:onClick="heavyJacketButtonClick"
-        android:text="Heavy Jacket"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/tshirt_pants"
-        app:layout_constraintTop_toTopOf="@+id/tshirt_pants" />
-
-    <Button
-        android:id="@+id/tshirt_pants"
-        android:layout_width="95dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="32dp"
-        android:onClick="sweaterPantsButtonClick"
-        android:text="Sweater/Pants"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/tshirt_shorts"
-        app:layout_constraintTop_toTopOf="@+id/tshirt_shorts" />
-
-    <Button
-        android:id="@+id/tshirt_shorts"
-        android:layout_width="95dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="12dp"
-        android:onClick="tshirtShortsButtonClick"
-        android:text="Tshirt/Shorts"
-        android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="@+id/extreme"
-        app:layout_constraintTop_toBottomOf="@+id/secondary_category" />
-
-    <TextView
-        android:id="@+id/secondary_category"
-        android:layout_width="344dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="192dp"
-        android:text="Secondary Weather Category"
-        app:layout_constraintStart_toStartOf="@+id/primary_category"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/extreme"
         android:layout_width="95dp"
         android:layout_height="45dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="12dp"
-        android:onClick="extremeButtonClick"
-        android:text="Extreme"
-        android:textSize="10sp"
+        android:layout_marginTop="56dp"
+        android:onClick="extremeClick"
+        android:text="@string/extreme"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/primary_category" />
+        app:layout_constraintTop_toBottomOf="@+id/between_10_20" />
 
     <TextView
-        android:id="@+id/primary_category"
-        android:layout_width="344dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:text="Primary Weather Category"
+        android:id="@+id/welcome_sub"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="@string/please_select_the_weather_conditions_that_apply"
+        app:layout_constraintStart_toStartOf="@+id/welcome"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/welcome_to_weather_tactons"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/up_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:onClick="up20Click"
+        android:text="@string/_20_c"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_sub" />
+
+    <Button
+        android:id="@+id/down_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:onClick="down10Click"
+        android:text="@string/_10_c"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/up_20" />
+
+    <Button
+        android:id="@+id/between_10_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:onClick="between1020Click"
+        android:text="@string/_10_20_c"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/down_10" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to API"
+        android:layout_marginTop="56dp"
         android:onClick="goToAPI"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Go to API"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.721" />
+        app:layout_constraintTop_toBottomOf="@+id/extreme" />
 
 </android.support.constraint.ConstraintLayout>
