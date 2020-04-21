@@ -47,7 +47,7 @@ public class ActivityVibration extends AppCompatActivity {
             tshirtShortsButtonClick();
         }else if(vibration_categories.contains("tshirt_pants")){
             Log.d("IN RUN VIBRATIONS", "TSHIRT PANTS" + vibration_categories);
-            sweaterPantsButtonClick();
+            tshirtPantsButtonClick();
         }else if(vibration_categories.contains("light_jacket")){
             Log.d("IN RUN VIBRATIONS", "LIGHT JACKET" + vibration_categories);
             lightJacketButtonClick();
@@ -96,6 +96,23 @@ public class ActivityVibration extends AppCompatActivity {
     public void tshirtShortsButtonClick() {
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         long[] pattern = new long[]{1000, 200, 200, 200};
+
+        // An amplitude of 0 implies no vibration (i.e. off), and any pairs with a timing value of 0 will be ignored.
+        int[] amps = new int[]{0, 100, 0, 100};
+
+        // -1 : Do not repeat this pattern
+        // pass 0 if you want to repeat this pattern from 0th index
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            v.vibrate(VibrationEffect.createWaveform(pattern, amps, -1));
+        } else {
+            //deprecated in API 26
+            v.vibrate(pattern, -1);
+        }
+    }
+
+    public void tshirtPantsButtonClick() {
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        long[] pattern = new long[]{1000, 200, 200, 800};
 
         // An amplitude of 0 implies no vibration (i.e. off), and any pairs with a timing value of 0 will be ignored.
         int[] amps = new int[]{0, 100, 0, 100};
