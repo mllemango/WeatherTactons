@@ -19,6 +19,10 @@ public class ActivityVibration extends AppCompatActivity {
     public ArrayList vibration_categories = new ArrayList();
     private Handler mHandler = new Handler();
 
+    public ActivityVibration(){
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,26 +41,27 @@ public class ActivityVibration extends AppCompatActivity {
     }
 
     public void runVibrations(View view) {
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         if(vibration_categories.contains("EXTREME")){
             Log.d("IN RUN VIBRATIONS", "EXTREME" + vibration_categories);
-            extremeButtonClick();
+            extremeButtonClick(v);
         }
 
         if(vibration_categories.contains("tshirt_shorts")){
             Log.d("IN RUN VIBRATIONS", "TSHIRT SHORTS" + vibration_categories);
-            tshirtShortsButtonClick();
+            tshirtShortsButtonClick(v);
         }else if(vibration_categories.contains("tshirt_pants")){
             Log.d("IN RUN VIBRATIONS", "TSHIRT PANTS" + vibration_categories);
-            tshirtPantsButtonClick();
+            tshirtPantsButtonClick(v);
         }else if(vibration_categories.contains("light_jacket")){
             Log.d("IN RUN VIBRATIONS", "LIGHT JACKET" + vibration_categories);
-            lightJacketButtonClick();
+            lightJacketButtonClick(v);
         }else if(vibration_categories.contains("heavy_jacket")){
             Log.d("IN RUN VIBRATIONS", "HEAVYH JACKET" + vibration_categories);
-            heavyJacketButtonClick();
+            heavyJacketButtonClick(v);
         }else if(vibration_categories.contains("sweater_pants")){
             Log.d("IN RUN VIBRATIONS", "TSHIRT PANTS" + vibration_categories);
-            sweaterPantsButtonClick();
+            sweaterPantsButtonClick(v);
         }
 
         try {
@@ -68,16 +73,15 @@ public class ActivityVibration extends AppCompatActivity {
 
         if(vibration_categories.contains("raining")){
             Log.d("IN RUN VIBRATIONS", "RAINING" + vibration_categories);
-            umbrellaButtonClick();
+            umbrellaButtonClick(v);
         }else if(vibration_categories.contains("snowing")){
             Log.d("IN RUN VIBRATIONS", "SNOWING" + vibration_categories);
-            bootsButtonClick();
+            bootsButtonClick(v);
         }
 
     }
 
-    public void extremeButtonClick(){
-        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+    public void extremeButtonClick(Vibrator v){
         long[] pattern = new long[]{1000, 800, 200, 800, 200, 800};
 
         // An amplitude of 0 implies no vibration (i.e. off), and any pairs with a timing value of 0 will be ignored.
@@ -93,8 +97,7 @@ public class ActivityVibration extends AppCompatActivity {
         }
     }
 
-    public void tshirtShortsButtonClick() {
-        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+    public void tshirtShortsButtonClick(Vibrator v) {
         long[] pattern = new long[]{1000, 200, 200, 200};
 
         // An amplitude of 0 implies no vibration (i.e. off), and any pairs with a timing value of 0 will be ignored.
@@ -110,8 +113,7 @@ public class ActivityVibration extends AppCompatActivity {
         }
     }
 
-    public void tshirtPantsButtonClick() {
-        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+    public void tshirtPantsButtonClick(Vibrator v) {
         long[] pattern = new long[]{1000, 200, 200, 800};
 
         // An amplitude of 0 implies no vibration (i.e. off), and any pairs with a timing value of 0 will be ignored.
@@ -127,8 +129,7 @@ public class ActivityVibration extends AppCompatActivity {
         }
     }
 
-    public void sweaterPantsButtonClick() {
-        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+    public void sweaterPantsButtonClick(Vibrator v) {
         long[] pattern = new long[]{1000, 200, 200, 200};
 
         // An amplitude of 0 implies no vibration (i.e. off), and any pairs with a timing value of 0 will be ignored.
@@ -144,8 +145,7 @@ public class ActivityVibration extends AppCompatActivity {
         }
     }
 
-    public void heavyJacketButtonClick() {
-        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+    public void heavyJacketButtonClick(Vibrator v) {
         long[] pattern = new long[]{1000, 200, 200, 200, 200, 200, 200, 800};
 
         // An amplitude of 0 implies no vibration (i.e. off), and any pairs with a timing value of 0 will be ignored.
@@ -161,8 +161,7 @@ public class ActivityVibration extends AppCompatActivity {
         }
     }
 
-    public void lightJacketButtonClick() {
-        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+    public void lightJacketButtonClick(Vibrator v) {
         long[] pattern = new long[]{1000, 200, 200, 200, 200, 200, 200, 800};
 
         // An amplitude of 0 implies no vibration (i.e. off), and any pairs with a timing value of 0 will be ignored.
@@ -178,8 +177,7 @@ public class ActivityVibration extends AppCompatActivity {
         }
     }
 
-    public void bootsButtonClick(){
-        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+    public void bootsButtonClick(Vibrator v){
         long[] pattern = new long[]{1000, 1000};
 
         // An amplitude of 0 implies no vibration (i.e. off), and any pairs with a timing value of 0 will be ignored.
@@ -195,8 +193,7 @@ public class ActivityVibration extends AppCompatActivity {
         }
     }
 
-    public void umbrellaButtonClick(){
-        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+    public void umbrellaButtonClick(Vibrator v){
         long[] pattern = new long[]{1000, 150, 150, 150, 150, 150, 150, 150, 150, 150};
 
         // An amplitude of 0 implies no vibration (i.e. off), and any pairs with a timing value of 0 will be ignored.

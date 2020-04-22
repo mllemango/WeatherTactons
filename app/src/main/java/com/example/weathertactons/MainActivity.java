@@ -28,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         Log.d("VIBRATION ARRAY", "MAIN MENU: " + vibration_categories);
     }
 
+    public void weatherButtonClick(View view) {
+        Intent intent = new Intent(this, RealTimeWeather.class);
+        intent.putExtra("combine", true);
+        startActivity(intent);
+    }
     public void up20Click(View view) {
         Intent intent = new Intent(this, ActivityHot.class);
         intent.putExtra("VIBRATIONSARRAY",vibration_categories);
