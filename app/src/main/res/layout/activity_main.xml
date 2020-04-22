@@ -10,11 +10,12 @@
         android:id="@+id/extreme"
         android:layout_width="95dp"
         android:layout_height="45dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="32dp"
         android:onClick="extremeClick"
         android:text="@string/extreme"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/between_10_20" />
 
@@ -22,7 +23,7 @@
         android:id="@+id/welcome_sub"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="148dp"
         android:text="@string/please_select_the_weather_conditions_that_apply"
         app:layout_constraintStart_toStartOf="@+id/welcome"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,11 +43,11 @@
         android:id="@+id/up_20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="36dp"
         android:onClick="up20Click"
         android:text="@string/_20_c"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome_sub" />
 
@@ -54,11 +55,11 @@
         android:id="@+id/down_10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="24dp"
         android:onClick="down10Click"
         android:text="@string/_10_c"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/up_20" />
 
@@ -66,11 +67,11 @@
         android:id="@+id/between_10_20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="28dp"
         android:onClick="between1020Click"
         android:text="@string/_10_20_c"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/down_10" />
 
@@ -78,11 +79,23 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="36dp"
         android:onClick="goToAPI"
         android:text="Go to API"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/extreme" />
+
+    <Button
+        android:id="@+id/weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="84dp"
+        android:onClick="weatherButtonClick"
+        android:text="Get me the weather"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
